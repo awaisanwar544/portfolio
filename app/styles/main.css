@@ -2,16 +2,16 @@
 
 body {
   background: rgb(255, 255, 255);
-  margin: 0 24px 0 24px;
 }
 
 header {
   display: flex;
   justify-content: center;
+  margin: 0 24px 0 24px;
 }
 
 #logo {
-    align-items: center;
+  align-items: center;
 }
 
 #logo-text {
@@ -24,17 +24,26 @@ header {
 }
 
 #menu {
-    width: 40px;
+  width: 40px;
 }
 
 .center {
-    width: 50%;
+  width: 50%;
 }
 
 .align-left {
-    text-align: left;
+  text-align: left;
 }
 
 .align-right {
-    text-align: right;
+  text-align: right;
+}
+
+.content {
+  display: flex;
+  background-image: url("../assets/header_illsutration.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  min-height: 100vh;
 }
