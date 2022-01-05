@@ -105,3 +105,6 @@ dist
 .hintrc
 .stylelintrc.json
 .github/workflows/linters.yml
+app/styles/reset.css
+.DS_Store
+.DS_Store

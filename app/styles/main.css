@@ -1,3 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
 body {
-  background: grey;
+  background: rgb(255, 255, 255);
+  margin: 0 24px 0 24px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+#logo {
+    align-items: center;
+}
+
+#logo-text {
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  align-items: center;
+  height: 100%;
+}
+
+#menu {
+    width: 40px;
+}
+
+.center {
+    width: 50%;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
 }
