@@ -1,7 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 body {
   background: rgb(255, 255, 255);
+}
+
+.primary-text-color {
+  color: #172B4D;
+}
+
+.secondary-text-color {
+  color: #36B37F;
+}
+
+.main-heading {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 0 24px 0 24px;
+}
+
+.paragraph {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  margin: 58px 24px 0 24px;
+  text-align: center;
+  line-height: 140%;
+}
+
+.center-text {
+  text-align: center;
 }
 
 header {
@@ -41,9 +71,13 @@ header {
 
 .content {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-image: url("../assets/header_illsutration.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   min-height: 100vh;
 }
+
+
