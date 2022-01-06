@@ -137,11 +137,59 @@ header {
   width: 48px;
   height: 4px;
   background-color: #36b37f;
+  align-self: start;
 }
 
 .work-item {
+  display: grid;
+  grid-template-rows: 252px auto;
   border: 1px solid #D0D9D4;
   border-radius: 8px;
   background: #EBF0EE;
   width: 327px;
+}
+
+.work-item-details {
+  grid-row-start: 2;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+
+.work-item-lang {
+  display: flex;
+  margin: 16px 12px;
+  justify-content: space-between;
+}
+
+.lang-item {
+  background: #EBF0EE;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.lang-item > p {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.button {
+  background: #36B37F;
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  padding: 12px;
+  min-width: 91px;
+  min-height: 48px;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.button :hover {
+  background: #36B37F;
+  box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.button :active {
+  background: #008552;
+  box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
 }
