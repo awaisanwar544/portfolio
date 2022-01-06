@@ -4,6 +4,12 @@ body {
   background: rgb(255, 255, 255);
 }
 
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
 .primary-text-color {
   color: #172b4d;
 }
@@ -52,6 +58,7 @@ header {
   font-size: 20px;
   align-items: center;
   height: 100%;
+  text-decoration: none;
 }
 
 #menu {
@@ -84,8 +91,9 @@ header {
 
 .social-icons {
   display: flex;
-  list-style-type: none;
+  justify-content: center;
   margin-top: 58px;
+  align-content: center;
   align-items: center;
 }
 
@@ -93,6 +101,6 @@ header {
   margin: 5px 5px 5px 5px;
 }
 
-.social-icons > li > img {
+.social-icons > li > a > img {
   width: 20px;
 }
