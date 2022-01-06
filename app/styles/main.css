@@ -126,8 +126,7 @@ header {
 #works {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: auto auto;
-  grid-auto-rows: 474px;
+  grid-template-rows: 8em 2em;
   grid-row-gap: 24px;
   justify-items: center;
   text-align: center;
@@ -137,34 +136,39 @@ header {
   width: 48px;
   height: 4px;
   background-color: #36b37f;
-  align-self: start;
+  justify-self: center;
 }
 
 .work-item {
   display: grid;
-  grid-template-rows: 252px auto;
+  grid-template-rows: 252px;
   border: 1px solid #D0D9D4;
   border-radius: 8px;
   background: #EBF0EE;
   width: 327px;
+  justify-items: space-between;
 }
 
 .work-item-details {
+  display: flex;
+  flex-direction: column;
   grid-row-start: 2;
   background: #FFFFFF;
   border-radius: 8px;
+  align-items: center;
 }
 
 .work-item-lang {
   display: flex;
-  margin: 16px 12px;
+  margin: 16px 2px;
   justify-content: space-between;
 }
 
 .lang-item {
   background: #EBF0EE;
   border-radius: 4px;
-  padding: 8px 12px;
+  padding: 4px 12px;
+  margin: 0px 5px;
 }
 
 .lang-item > p {
@@ -173,23 +177,35 @@ header {
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #36B37F;
   border-radius: 4px;
   border: none;
   color: #ffffff;
   padding: 12px;
-  min-width: 91px;
+  min-width: 122px;
   min-height: 48px;
   font-weight: 500;
   font-size: 17px;
+  text-decoration: none;
+  margin: 12px 12px;
+  line-height: 28px;
+  align-items: center;
+  text-align: center;
 }
 
-.button :hover {
-  background: #36B37F;
+.button > span {
+  position: absolute;
+  vertical-align: central;
+}
+
+.button:hover {
   box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
 }
 
-.button :active {
+.button:active {
   background: #008552;
   box-shadow: 0px 8px 16px rgba(54, 179, 127, 0.24);
 }
