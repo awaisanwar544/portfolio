@@ -212,12 +212,18 @@ header {
 }
 
 .about-bg-1 {
+  background-image: url("../assets/i_about_me_t.png");
+  width: 68px;
+  height: 110px;
   position: absolute;
   top: 0;
   right: 0;
 }
 
 .about-bg-2 {
+  background-image: url("../assets/i_about_me_b.png");
+  width: 71px;
+  height: 65px;
   position: absolute;
   bottom: 0;
   left: 0;
