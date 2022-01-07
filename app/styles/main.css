@@ -107,6 +107,10 @@ header {
   margin: 5px 5px 5px 5px;
 }
 
+.card > img {
+  margin-top: 40px;
+}
+
 .social-icons > li > a > img {
   width: 20px;
 }
@@ -277,22 +281,4 @@ header {
   margin: 10px 8px 0 8px;
   padding: 12px;
   color: #36b37e;
-}
-
-.icon-placeholder {
-  margin-top: 40px;
-  width: 128px;
-  height: 128px;
-}
-
-#frameworks {
-  background-image: url("../assets/Icons/icon-frameworks.png");
-}
-
-#languages {
-  background-image: url("../assets/Icons/icon-languages.png");
-}
-
-#skills {
-  background-image: url("../assets/Icons/icon-skills.png");
 }
