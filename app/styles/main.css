@@ -288,3 +288,32 @@ header {
   padding: 12px;
   color: #36b37e;
 }
+
+footer {
+  text-align: center;
+}
+
+#form-text {
+  font-size: 40px;
+  line-height: 52px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  height: 48px;
+}
+
+.text-fields {
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  padding: 0 16px;
+  margin: 12px 0;
+}
+
+.text-fields :focus {
+  border: 1px solid #36b37e;
+}
