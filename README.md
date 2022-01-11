@@ -16,6 +16,11 @@
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/awaisanwar544/)
 
 
+👤 **Omar Ahmed**
+
+- GitHub: [@githubhandle](https://github.com/omar25ahmed)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
