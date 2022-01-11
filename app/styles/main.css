@@ -293,6 +293,10 @@ footer {
   text-align: center;
 }
 
+#form-container {
+  position: relative;
+}
+
 #form-text {
   font-size: 40px;
   line-height: 52px;
@@ -301,6 +305,7 @@ footer {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 input {
@@ -308,12 +313,46 @@ input {
 }
 
 .text-fields {
+  outline: none !important;
   border: 1px solid #d0d9d4;
   border-radius: 4px;
-  padding: 0 16px;
+  padding-left: 16px;
   margin: 12px 0;
+  width: 100%;
 }
 
-.text-fields :focus {
+.text-fields:focus {
   border: 1px solid #36b37e;
+}
+
+textarea {
+  padding-top: 12px;
+  min-height: 200px;
+}
+
+.footer-icons {
+  margin-top: 32px;
+}
+
+.email {
+height: 189px;
+font-size: 20px;
+}
+
+.bar {
+  margin-top: 150px;
+  background-image: url('../assets/light.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-width: 100%;
+  height: 50px;
+}
+
+#bg-footer {
+  background-image: url('../assets/illustration-contact-form.png');
+  width: 92px;
+  height: 132px;
+  position: absolute;
+  bottom: 200px;
+  right: -65px;
 }
