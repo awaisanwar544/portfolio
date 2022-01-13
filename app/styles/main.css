@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: rgb(255, 255, 255);
   margin: 0;
@@ -139,10 +143,16 @@ header {
 #works {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 8em 2em;
+  grid-template-rows: 8em 2em auto;
   grid-row-gap: 24px;
   justify-items: center;
   text-align: center;
+}
+
+#items-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 24px;
 }
 
 .indicator {
@@ -157,8 +167,19 @@ header {
   grid-template-rows: 252px;
   border: 1px solid #d0d9d4;
   border-radius: 8px;
-  background: #ebf0ee;
   width: 327px;
+  z-index: 1000;
+}
+
+.rounded-img {
+  margin: 2px;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
 
 .work-item-details {
@@ -220,6 +241,18 @@ header {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
 }
 
+#about {
+  position: relative;
+}
+
+#about-wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 25px;
+}
+
 .about-bg-1 {
   background-image: url("../assets/i_about_me_t.png");
   width: 68px;
@@ -236,18 +269,6 @@ header {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-#about {
-  position: relative;
-}
-
-#about-wraper {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  margin-top: 25px;
 }
 
 #about-wraper > h2 {
@@ -427,16 +448,23 @@ textarea {
   }
 
   #works {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    margin: 5em 10em;
+    grid-template-rows: 8em auto;
+  }
+
+  #items-container {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-row-gap: 24px;
+    grid-column-gap: 24px;
   }
 
   #works > h2 {
+    display: block;
     width: 100%;
+  }
+
+  #about-wraper {
+    margin: 10em 18em 2em 18em;
   }
 
   .about-bg-1 {
@@ -457,10 +485,6 @@ textarea {
     position: absolute;
     bottom: -5em;
     left: 0;
-  }
-
-  #about-wraper {
-    margin: 10em 18em 2em 18em;
   }
 
   #cards {
@@ -487,10 +511,10 @@ textarea {
   #form-text {
     flex: 1 0.3em;
     margin-right: 1em;
-    text-align: left;
-    font-size: 30px;
+    text-align: center;
+    font-size: 1.6em;
     line-height: 52px;
-    margin-top: -3em;
+    margin-top: -5em;
   }
 
   #form-flex-block > form {
@@ -508,7 +532,6 @@ textarea {
 
   .bar,
   #bg-footer,
-  #fullname,
   .email {
     display: none;
   }
