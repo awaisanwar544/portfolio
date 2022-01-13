@@ -334,6 +334,10 @@ input {
   border: 1px solid #36b37e;
 }
 
+#desktop-field {
+  display: none;
+}
+
 textarea {
   padding-top: 12px;
   min-height: 200px;
@@ -366,12 +370,16 @@ textarea {
   right: -65px;
 }
 
-#nav-elements {
+#nav-elements,
+#line {
+  display: none;
+}
+
+.desktop-footer-bg {
   display: none;
 }
 
 @media only screen and (min-width: 992px) {
-  
   #logo {
     display: none;
   }
@@ -389,7 +397,7 @@ textarea {
     justify-content: center;
     text-align: left;
   }
-  
+
   #nav-elements {
     display: flex;
     column-gap: 24px;
@@ -425,7 +433,6 @@ textarea {
     justify-content: space-around;
     align-content: center;
     margin: 5em 10em;
-    
   }
 
   #works > h2 {
@@ -451,9 +458,129 @@ textarea {
     bottom: -5em;
     left: 0;
   }
-  
+
   #about-wraper {
-    margin: 10em 18em;
+    margin: 10em 18em 2em 18em;
   }
 
+  #cards {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 10em 5em 10em;
+  }
+
+  .card {
+    margin: 0 12px;
+    width: 33%;
+    padding: 12px 0;
+  }
+
+  #form-container {
+    margin: 2em 10em 2em 10em;
+  }
+
+  #form-flex-block {
+    display: flex;
+    align-items: center;
+  }
+
+  #form-text {
+    flex: 1 0.3em;
+    margin-right: 1em;
+    text-align: left;
+    font-size: 30px;
+    line-height: 52px;
+    margin-top: -3em;
+  }
+
+  #form-flex-block > form {
+    flex: 1.5 0.7em;
+  }
+
+  #form-flex-block > form > div {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #form-flex-block > form > div > button {
+    margin-left: -10px;
+  }
+
+  .bar,
+  #bg-footer,
+  #fullname,
+  .email {
+    display: none;
+  }
+
+  #desktop-field {
+    display: flex;
+    border: none;
+    width: 100%;
+    margin-bottom: -0.75em;
+  }
+
+  #desktop-field > input {
+    flex: 1 0.5em;
+  }
+
+  #firstname {
+    margin-right: 20px;
+    margin-left: -10px;
+  }
+
+  #lastname {
+    margin-right: -10px;
+  }
+
+  #footer-icons {
+    margin-top: 20em;
+    margin-bottom: 0;
+  }
+
+  #line {
+    display: block;
+    position: relative;
+    height: 1px;
+    width: 100%;
+    background: #dfe1e6;
+    bottom: 6em;
+  }
+
+  .desktop-footer-bg {
+    display: block;
+  }
+
+  #bg-footer-d-l {
+    position: absolute;
+    width: 235.78px;
+    height: 261.79px;
+    background-image: url("../assets/illustration-1-contact-form-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 5em;
+    left: -12em;
+  }
+
+  #bg-footer-d-c {
+    position: absolute;
+    width: 130.28px;
+    height: 105.87px;
+    background-image: url("../assets/illustration-2-contact-form-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 10em;
+    left: 5em;
+  }
+
+  #bg-footer-d-r {
+    position: absolute;
+    width: 313.9px;
+    height: 448.7px;
+    background-image: url("../assets/contact-form-illustratoin-3-desktop.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 4em;
+    right: -18.5em;
+  }
 }
