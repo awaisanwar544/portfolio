@@ -429,6 +429,7 @@ textarea {
   }
 
   #nav-elements > li:hover {
+    transition: color 0.5s linear;
     color: #36b37e;
   }
 
