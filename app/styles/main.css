@@ -359,6 +359,11 @@ input {
   width: 100%;
 }
 
+.text-fields:hover {
+  transform: translate(10px);
+
+}
+
 .text-fields:focus {
   border: 1px solid #36b37e;
 }
