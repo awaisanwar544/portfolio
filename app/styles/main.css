@@ -51,7 +51,7 @@ a {
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
-  margin: 20px 24px 0 24px;
+  margin: 24px 24px 0 24px;
   text-align: center;
   line-height: 140%;
 }
@@ -64,6 +64,25 @@ header {
   display: flex;
   justify-content: center;
   margin: 0 24px 0 24px;
+}
+
+.vibrating-text{
+  animation-duration: 2s;
+  animation-name: vibrate;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes vibrate {
+  from {
+    margin-top: -1em;
+    margin-bottom: 1em;
+  }
+
+  to {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 #logo {
