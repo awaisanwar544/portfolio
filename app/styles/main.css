@@ -180,6 +180,12 @@ header {
   height: 100%;
   object-fit: cover;
   overflow: hidden;
+  transition: transform 1s ease-in-out;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+  transition: transform 1s ease-in-out;
 }
 
 .work-item-details {
@@ -235,7 +241,8 @@ header {
 
 .button:hover {
   box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
-  transition: box-shadow 0.5s ease-in; }
+  transition: box-shadow 0.5s ease-in;
+}
 
 .button:active {
   background: #008552;
