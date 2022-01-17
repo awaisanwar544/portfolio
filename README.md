@@ -3,7 +3,7 @@
 > This is Portfolio project to showcase my work as a Developer.
 
 ## Live Link
-> https://awaisanwar544.github.io/portfolio/app/index.html
+[Click here to go to the live portfolio](https://awaisanwar544.github.io/portfolio/app/index.html)
 
 ## Built With
 
