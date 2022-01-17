@@ -2,7 +2,8 @@
 
 > This is Portfolio project to showcase my work as a Developer.
 
-## Click here https://awaisanwar544.github.io/portfolio/app/index.html to see my portfolio
+## Live Link
+> https://awaisanwar544.github.io/portfolio/app/index.html
 
 ## Built With
 
