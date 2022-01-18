@@ -66,25 +66,6 @@ header {
   margin: 0 24px 0 24px;
 }
 
-.vibrating-text {
-  animation-duration: 2s;
-  animation-name: vibrate;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes vibrate {
-  from {
-    margin-top: -1em;
-    margin-bottom: 1em;
-  }
-
-  to {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-}
-
 #logo {
   align-items: center;
 }
@@ -399,7 +380,7 @@ textarea {
 }
 
 .email {
-  height: 189px;
+  height: 50px;
   font-size: 20px;
 }
 
@@ -414,6 +395,7 @@ textarea {
 
 #bg-footer {
   background-image: url('../assets/illustration-contact-form.png');
+  background-repeat: no-repeat;
   width: 92px;
   height: 132px;
   position: absolute;
