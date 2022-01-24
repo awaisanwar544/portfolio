@@ -24,6 +24,16 @@
 - GitHub: [@githubhandle](https://github.com/omar25ahmed)
 
 
+👤 **Miguel Fermin**
+
+- GitHub: [@githubhandle](https://github.com/ferminmu26)
+
+
+👤 **Mauricio J. Monta**
+
+- GitHub: [@githubhandle](https://github.com/mauriciomonta)
+
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
