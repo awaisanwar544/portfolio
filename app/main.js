@@ -1,18 +1,18 @@
-const display_menu = () => {
-    document.querySelector('#mobile-menu').className = 'mobile-menu';
-}
+const displayMenu = () => {
+  document.querySelector('#mobile-menu').className = 'mobile-menu';
+};
 
-const hide_menu = () => {
-    document.querySelector('#mobile-menu').className = 'd-none';
-}
+const hideMenu = () => {
+  document.querySelector('#mobile-menu').className = 'd-none';
+};
 
-const menu_btn = document.querySelector('#menu');
-menu_btn.addEventListener('click', display_menu);
+const menuBtn = document.querySelector('#menu');
+menuBtn.addEventListener('click', displayMenu);
 
-const cancel_btn = document.querySelector('#cancel_menu');
-cancel_btn.addEventListener('click', hide_menu);
+const cancelBtn = document.querySelector('#cancel_menu');
+cancelBtn.addEventListener('click', hideMenu);
 
-const nav_items = document.querySelectorAll('.nav-link-mobile');
-nav_items.forEach(item => {
-    item.addEventListener('click', hide_menu);
-})
+const navItems = document.querySelectorAll('.nav-link-mobile');
+navItems.forEach((item) => {
+  item.addEventListener('click', hideMenu);
+});
