@@ -168,7 +168,7 @@ header {
   border: 1px solid #d0d9d4;
   border-radius: 8px;
   width: 327px;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .rounded-img {
@@ -403,9 +403,37 @@ textarea {
   right: -65px;
 }
 
-#nav-elements,
-#line {
+.d-none {
   display: none;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  padding: 2em;
+  background-color: #fff;
+  z-index: 100;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  border-radius: 0 0 7em 7em;
+}
+
+.mobile-menu > div {
+  margin-left: auto;
+  padding: 0 2em;
+}
+
+.mobile-menu > ul li {
+  margin-top: 1em;
+}
+
+.nav-link-mobile {
+  padding: 0 2em;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
 }
 
 .desktop-footer-bg {
@@ -438,6 +466,8 @@ textarea {
     font-size: 15px;
     line-height: 20px;
     margin-top: 26px;
+    width: auto;
+    height: auto;
   }
 
   #nav-elements > li:hover {
