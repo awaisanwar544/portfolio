@@ -19,10 +19,6 @@ navItems.forEach((item) => {
 
 // code for modal
  
-const displayModal = () => {
-  document.querySelector('#modal-wrapper').style.display = 'block';
-}
- 
 const hideModal = () => {
   document.querySelector('#modal-wrapper').style.display = 'none';
 };
@@ -35,15 +31,12 @@ projectBtn.forEach((item) => {
 const cancelBtnModal = document.querySelector('#modal-cancel');
 cancelBtnModal.addEventListener('click', hideModal);
  
-const modlaWrapper = document.querySelector('#modal-wrapper');
-modlaWrapper.addEventListener('click', hideModal);
- 
 // data for projects
  
 let projects= {
   0: {
-    image: "./assets/images.jpeg",
-    title: "Project 1: I'm working on it",
+    image: "./assets/project-image1.png",
+    title: "Research Roof - A wordpress project",
     tech: ["HTML", "CSS", "Javascript", "Ruby on Rails"],
     description: "orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.",
     liveLink: "https://github.com/awaisanwar544/portfolio",
@@ -58,7 +51,7 @@ let projects= {
     gitLink: "https://github.com/awaisanwar544/portfolio"
   },
   2: {
-    image: "./assets/images.jpeg",
+    image: "./assets/project-image1.png",
     title: "Project 3: I'm working on it",
     tech: ["HTML", "CSS", "Javascript", "Ruby on Rails"],
     description: "orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.",
@@ -87,7 +80,7 @@ let projects= {
     tech: ["HTML", "CSS", "Javascript", "Ruby on Rails"],
     description: "orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.",
     liveLink: "https://github.com/awaisanwar544/portfolio",
-    gitLink: "https://github.com/awaisanwar544/portfolio"
+    gitLink: "https://google.com"
   }
 };
  
@@ -98,11 +91,47 @@ function addData() {
   
   for (const item in projectsList) {
     projectsList[item].querySelector('img').src = projects[item]['image'];
-    projectsList[item].querySelector('h2').innerHTML = projects[item]['title']
+    projectsList[item].querySelector('h2').innerHTML = projects[item]['title'];
     projectsList[item].querySelectorAll('.lang-item').forEach((value, index)=> {
       value.firstChild.innerHTML = projects[item]['tech'][index]
-    })
+    });
   };
-}
+};
  
-addData()
+addData();
+
+function displayModal() {
+  addDataToModal(this.id)
+  document.querySelector('#modal-wrapper').style.display = 'block';
+};
+
+function addDataToModal(ref){
+  let btnId = ref.replace(/[^0-9]/g, '');
+  let img = projects[btnId]['image'];
+  let title = projects[btnId]['title'];
+  let techList = projects[btnId]['tech'];
+  let description = projects[btnId]['description'];
+  let liveLink = projects[btnId]['liveLink'];
+  let gitLink = projects[btnId]['gitLink'];
+
+
+  //add techlist
+  let modalList = document.querySelector('#modal-list');
+  modalList.innerHTML = "";
+
+  techList.forEach((value) => {
+    let node = document.createElement('li');
+    node.className = "lang-item";
+    let textNode = document.createTextNode(value);
+    node.appendChild(textNode);
+    modalList.appendChild(node);
+  });
+
+
+  document.querySelector('#screenshot').src = img;
+  document.querySelector('#modal-title').innerHTML = title;
+  document.querySelector('#description').innerHTML = description;
+  document.querySelector('#live-link').href = liveLink;
+  document.querySelector('#git-link').href = gitLink;
+
+};

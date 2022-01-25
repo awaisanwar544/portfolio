@@ -511,9 +511,9 @@ textarea {
   justify-content: center;
 }
 
-#modal-buttons > button{
+.modal-btn{
   min-width: 141px;
-  height: 48px;
+  min-height: 0;
   line-height: 16px;
   font-weight: 400;
 }
@@ -731,9 +731,55 @@ textarea {
     bottom: 4em;
     right: -18.5em;
   }
+  #modal-wrapper {
+    background-color: #c1c7d0e8;
+  }
 
   #modal {
-    max-width: 50%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    left: 15%;
+    max-width: 70%;
+  }
+
+  #modal-details {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+  }
+
+  #modal-title {
+    order: -2;
+    flex: 1 60%;
+    margin-top: 0;
+  }
+
+  #modal-buttons {
+    order: -1;
+    flex: 1 20%;
+  }
+
+  #modal-cancel {
+    position: relative;
+    margin: .5em 0;
+    float: right;
+    width: fit-content;
+    background-color: #c1c7d0;
+    right: 0;
+    top: 0;
+    border-radius: 8px;
+  }
+
+  #modal-cancel > img {
+    padding: .25em;
+    top: 50%;
+    left: 50%;
+  }
+
+  #modal-list {
+    width: 100%;
   }
 
 }
