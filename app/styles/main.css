@@ -511,14 +511,14 @@ textarea {
   justify-content: center;
 }
 
-.modal-btn{
+.modal-btn {
   min-width: 141px;
   min-height: 0;
   line-height: 16px;
   font-weight: 400;
 }
 
-#modal-buttons > button > img{
+#modal-buttons > button > img {
   margin-left: 1em;
 }
 
@@ -731,6 +731,7 @@ textarea {
     bottom: 4em;
     right: -18.5em;
   }
+
   #modal-wrapper {
     background-color: #c1c7d0e8;
   }
@@ -763,7 +764,7 @@ textarea {
 
   #modal-cancel {
     position: relative;
-    margin: .5em 0;
+    margin: 0.5em 0;
     float: right;
     width: fit-content;
     background-color: #c1c7d0;
@@ -773,7 +774,7 @@ textarea {
   }
 
   #modal-cancel > img {
-    padding: .25em;
+    padding: 0.25em;
     top: 50%;
     left: 50%;
   }
@@ -781,5 +782,4 @@ textarea {
   #modal-list {
     width: 100%;
   }
-
 }
