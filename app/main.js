@@ -16,3 +16,4 @@ const navItems = document.querySelectorAll('.nav-link-mobile');
 navItems.forEach((item) => {
   item.addEventListener('click', hideMenu);
 });
+
