@@ -232,6 +232,7 @@ header {
   margin: 12px 12px;
   line-height: 28px;
   text-align: center;
+  cursor: pointer;
 }
 
 .button > span {
@@ -356,10 +357,12 @@ input {
   padding-left: 16px;
   margin: 12px 0;
   width: 100%;
+  transition: transform 0.5s ease-in;
 }
 
 .text-fields:hover {
   transform: translate(10px);
+  transition: transform 0.5s ease-in;
 }
 
 .text-fields:focus {
