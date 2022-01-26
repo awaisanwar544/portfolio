@@ -74,8 +74,9 @@ navItems.forEach((item) => {
 
 function addDataToModal(ref) {
   const btnId = parseInt(ref.replace(/[^0-9]/g, ''), 10);
-  let { data: { proj } } = projects;
-  const { image, title, tech, description, liveLink, gitLink
+  const { data: { proj } } = projects;
+  const { 
+    image, title, tech, description, liveLink, gitLink,
   } = proj[btnId];
 
   // add techlist
