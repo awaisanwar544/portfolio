@@ -211,11 +211,11 @@ header {
 .lang-item {
   background: #ebf0ee;
   border-radius: 4px;
-  padding: 4px 12px;
+  padding: 4px 10px;
   margin: 0 5px;
 }
 
-.lang-item > p {
+.lang-item-p {
   font-size: 12px;
   font-weight: 600;
 }
@@ -583,7 +583,7 @@ textarea {
     grid-column-gap: 24px;
   }
 
-  #works > h2 {
+  #worksh2 {
     display: block;
     width: 100%;
   }

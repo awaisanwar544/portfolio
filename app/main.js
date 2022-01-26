@@ -99,6 +99,144 @@ function addDataToModal(ref) {
   document.querySelector('#git-link').href = gitLink;
 }
 
+// populate data on existing projects
+
+function addData() {
+  const projectsList = document.querySelectorAll('.work-item');
+  Object.keys(projectsList).forEach((item) => {
+    projectsList[item].querySelector('img').src = projects.data.proj[item].image;
+    projectsList[item].querySelector('h2').innerHTML = projects.data.proj[item].title;
+    projectsList[item].querySelectorAll('.lang-item').forEach((value, index) => {
+      value.firstChild.innerHTML = projects.data.proj[item].tech[index];
+    });
+  });
+}
+
+function addElement(ele, val, cName, eleId, parent){
+  let element = document.createElement(ele);
+  if (cName){
+    element.className = cName;;
+  }
+  element.innerHTML = val;
+  if (eleId){
+    element.id = eleId;
+  }
+  parent.appendChild(element);
+}
+
+function addWorkItem() {
+  let parent = document.querySelector('#items-container');
+  let ele = 'div';
+  let cName = 'work-item';
+  let val = '';
+  let eleId = false;
+  let w
+
+  const dataLength = Object.getOwnPropertyNames(projects.data.proj).length;
+  for(let i = 0; i < dataLength-1; i++) {
+    addElement(ele, val, cName, eleId, parent);
+  }
+
+  parent = document.querySelectorAll('.work-item');
+  cName = 'rounded-img';
+  parent.forEach((item) => {
+    addElement(ele, val, cName, eleId, item);
+  })
+
+  parent = document.querySelectorAll('.rounded-img');
+  cName = 'project-image';
+  ele = 'img'
+  parent.forEach((item) => {
+    addElement(ele, val, cName, eleId, item);
+  })
+
+  parent = document.querySelectorAll('.work-item');
+  cName = 'work-item-details';
+  ele = 'div'
+  parent.forEach((item) => {
+    addElement(ele, val, cName, eleId, item);
+  })
+
+  parent = document.querySelectorAll('.work-item-details');
+  cName = 'work-item-title primary-font primary-text-color';
+  ele = 'h2'
+  parent.forEach((item) => {
+    addElement(ele, val, cName, eleId, item);
+  })
+
+  cName = 'work-item-lang primary-font';
+  ele = 'ul'
+  parent.forEach((item) => {
+    addElement(ele, val, cName, eleId, item);
+  })
+
+  cName = 'work-item-button work-item-btn';
+  ele = 'div'
+  parent.forEach((item) => {
+    addElement(ele, val, cName, eleId, item);
+  })
+
+  parent = document.querySelectorAll('.work-item-lang');
+  cName = 'lang-item';
+  ele = 'li'
+  parent.forEach((item, index) => {
+    const liCount = Object.keys(projects.data.proj[index].tech).length;
+    for(let i= 0; i < liCount; i++) {
+      addElement(ele, val, cName, eleId, item);
+    }
+  })
+
+  parent = document.querySelectorAll('.lang-item');
+  cName = 'lang-item-p';
+  ele = 'p'
+  parent.forEach((item) => {
+    addElement(ele, val, cName, eleId, item);
+  })
+
+  parent = document.querySelectorAll('.work-item-btn');
+  cName = 'project-btn button work-item-button primary-font';
+  ele = 'button'
+  val = 'See Project'
+  parent.forEach((item, index) => {
+    eleId = 'proj-' + index;
+    addElement(ele, val, cName, eleId, item);
+  })
+}
+
+// create work section
+
+function addWorkSection() {
+
+  // h2 heading
+
+  let parent = document.querySelector('#works');
+  let ele = 'h2';
+  let cName = 'primary-text-color primary-font heading';
+  let val = 'My Recent works';
+  let eleId = 'worksh2';
+  addElement(ele, val, cName, eleId, parent);
+
+  // div indicator
+
+  ele = 'div';
+  cName = 'indicator';
+  val = '';
+  eleId = false;
+  addElement(ele, val, cName, eleId, parent);
+
+  // item container
+
+  cName = false;
+  eleId = 'items-container';
+  addElement(ele, val, cName, eleId, parent);
+
+  addWorkItem();
+  
+}
+
+addWorkSection();
+addData()
+
 function displayModal() {
   addDataToModal(this.id);
   document.querySelector('#modal-wrapper').style.display = 'block';
@@ -115,18 +253,3 @@ const hideModal = () => {
 
 const cancelBtnModal = document.querySelector('#modal-cancel');
 cancelBtnModal.addEventListener('click', hideModal);
-
-// populate data on existing projects
-
-function addData() {
-  const projectsList = document.querySelectorAll('.work-item');
-  Object.keys(projectsList).forEach((item) => {
-    projectsList[item].querySelector('img').src = projects.data.proj[item].image;
-    projectsList[item].querySelector('h2').innerHTML = projects.data.proj[item].title;
-    projectsList[item].querySelectorAll('.lang-item').forEach((value, index) => {
-      value.firstChild.innerHTML = projects.data.proj[item].tech[index];
-    });
-  });
-}
-
-addData();
