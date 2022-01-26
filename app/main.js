@@ -107,18 +107,19 @@ function addData() {
     projectsList[item].querySelector('img').src = projects.data.proj[item].image;
     projectsList[item].querySelector('h2').innerHTML = projects.data.proj[item].title;
     projectsList[item].querySelectorAll('.lang-item').forEach((value, index) => {
-      value.firstChild.innerHTML = projects.data.proj[item].tech[index];
+      const val = value;
+      val.firstChild.innerHTML = projects.data.proj[item].tech[index];
     });
   });
 }
 
-function addElement(ele, val, cName, eleId, parent){
-  let element = document.createElement(ele);
-  if (cName){
-    element.className = cName;;
+function addElement(ele, val, cName, eleId, parent) {
+  const element = document.createElement(ele);
+  if (cName) {
+    element.className = cName;
   }
   element.innerHTML = val;
-  if (eleId){
+  if (eleId) {
     element.id = eleId;
   }
   parent.appendChild(element);
@@ -130,10 +131,9 @@ function addWorkItem() {
   let cName = 'work-item';
   let val = '';
   let eleId = false;
-  let w
 
   const dataLength = Object.getOwnPropertyNames(projects.data.proj).length;
-  for(let i = 0; i < dataLength-1; i++) {
+  for (let i = 0; i < dataLength - 1; i += 1) {
     addElement(ele, val, cName, eleId, parent);
   }
 
@@ -141,75 +141,74 @@ function addWorkItem() {
   cName = 'rounded-img';
   parent.forEach((item) => {
     addElement(ele, val, cName, eleId, item);
-  })
+  });
 
   parent = document.querySelectorAll('.rounded-img');
   cName = 'project-image';
-  ele = 'img'
+  ele = 'img';
   parent.forEach((item) => {
     addElement(ele, val, cName, eleId, item);
-  })
+  });
 
   parent = document.querySelectorAll('.work-item');
   cName = 'work-item-details';
-  ele = 'div'
+  ele = 'div';
   parent.forEach((item) => {
     addElement(ele, val, cName, eleId, item);
-  })
+  });
 
   parent = document.querySelectorAll('.work-item-details');
   cName = 'work-item-title primary-font primary-text-color';
-  ele = 'h2'
+  ele = 'h2';
   parent.forEach((item) => {
     addElement(ele, val, cName, eleId, item);
-  })
+  });
 
   cName = 'work-item-lang primary-font';
-  ele = 'ul'
+  ele = 'ul';
   parent.forEach((item) => {
     addElement(ele, val, cName, eleId, item);
-  })
+  });
 
   cName = 'work-item-button work-item-btn';
-  ele = 'div'
+  ele = 'div';
   parent.forEach((item) => {
     addElement(ele, val, cName, eleId, item);
-  })
+  });
 
   parent = document.querySelectorAll('.work-item-lang');
   cName = 'lang-item';
-  ele = 'li'
+  ele = 'li';
   parent.forEach((item, index) => {
     const liCount = Object.keys(projects.data.proj[index].tech).length;
-    for(let i= 0; i < liCount; i++) {
+    for (let i = 0; i < liCount; i += 1) {
       addElement(ele, val, cName, eleId, item);
     }
-  })
+  });
 
   parent = document.querySelectorAll('.lang-item');
   cName = 'lang-item-p';
-  ele = 'p'
+  ele = 'p';
   parent.forEach((item) => {
     addElement(ele, val, cName, eleId, item);
-  })
+  });
 
   parent = document.querySelectorAll('.work-item-btn');
   cName = 'project-btn button work-item-button primary-font';
-  ele = 'button'
-  val = 'See Project'
+  ele = 'button';
+  val = 'See Project';
   parent.forEach((item, index) => {
-    eleId = 'proj-' + index;
+    eleId = `'proj-' ${index}`;
     addElement(ele, val, cName, eleId, item);
-  })
+  });
 }
 
 // create work section
 
 function addWorkSection() {
+// h2 heading
 
-  // h2 heading
-
-  let parent = document.querySelector('#works');
+  const parent = document.querySelector('#works');
   let ele = 'h2';
   let cName = 'primary-text-color primary-font heading';
   let val = 'My Recent works';
@@ -231,11 +230,10 @@ function addWorkSection() {
   addElement(ele, val, cName, eleId, parent);
 
   addWorkItem();
-  
 }
 
 addWorkSection();
-addData()
+addData();
 
 function displayModal() {
   addDataToModal(this.id);
