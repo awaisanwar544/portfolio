@@ -17,6 +17,45 @@ navItems.forEach((item) => {
   item.addEventListener('click', hideMenu);
 });
 
+function addDataToModal(ref) {
+  const btnId = ref.replace(/[^0-9]/g, '');
+  const img = projects[btnId].image;
+  const title = projects[btnId].title;
+  const techList = projects[btnId].tech;
+  const description = projects[btnId].description;
+  const liveLink = projects[btnId].liveLink;
+  const gitLink = projects[btnId].gitLink;
+
+  //add techlist
+
+  const modalList = document.querySelector('#modal-list');
+  modalList.innerHTML = '';
+
+  techList.forEach((value) => {
+    const node = document.createElement('li');
+    node.className = 'lang-item';
+    const textNode = document.createTextNode(value);
+    node.appendChild(textNode);
+    modalList.appendChild(node);
+  });
+
+  document.querySelector('#screenshot').src = img;
+  document.querySelector('#modal-title').innerHTML = title;
+  document.querySelector('#description').innerHTML = description;
+  document.querySelector('#live-link').href = liveLink;
+  document.querySelector('#git-link').href = gitLink;
+}
+
+function displayModal() {
+  addDataToModal(this.id);
+  document.querySelector('#modal-wrapper').style.display = 'block';
+}
+
+const projectBtn = document.querySelectorAll('.project-btn');
+projectBtn.forEach((item) => {
+  item.addEventListener('click', displayModal);
+});
+
 const hideModal = () => {
   document.querySelector('#modal-wrapper').style.display = 'none';
 };
@@ -91,42 +130,4 @@ function addData() {
 
 addData();
 
-function addDataToModal(ref) {
-  const btnId = ref.replace(/[^0-9]/g, '');
-  const img = projects[btnId].image;
-  const title = projects[btnId].title;
-  const techList = projects[btnId].tech;
-  const description = projects[btnId].description;
-  const liveLink = projects[btnId].liveLink;
-  const gitLink = projects[btnId].gitLink;
-
-  //add techlist
-
-  const modalList = document.querySelector('#modal-list');
-  modalList.innerHTML = '';
-
-  techList.forEach((value) => {
-    const node = document.createElement('li');
-    node.className = 'lang-item';
-    const textNode = document.createTextNode(value);
-    node.appendChild(textNode);
-    modalList.appendChild(node);
-  });
-
-  document.querySelector('#screenshot').src = img;
-  document.querySelector('#modal-title').innerHTML = title;
-  document.querySelector('#description').innerHTML = description;
-  document.querySelector('#live-link').href = liveLink;
-  document.querySelector('#git-link').href = gitLink;
-}
-
-function displayModal() {
-  addDataToModal(this.id);
-  document.querySelector('#modal-wrapper').style.display = 'block';
-}
-
-const projectBtn = document.querySelectorAll('.project-btn');
-projectBtn.forEach((item) => {
-  item.addEventListener('click', displayModal);
-});
 
