@@ -49,7 +49,7 @@ const projects = {
         liveLink: 'https://github.com/awaisanwar544/portfolio',
         gitLink: 'https://google.com',
       },
-    ]
+    ],
   },
 };
 
@@ -73,9 +73,10 @@ navItems.forEach((item) => {
 });
 
 function addDataToModal(ref) {
-  const btnId = parseInt(ref.replace(/[^0-9]/g, ''));
-  let {data: {proj}} = projects;
-  let {image, title, tech, description, liveLink, gitLink} = proj[btnId];
+  const btnId = parseInt(ref.replace(/[^0-9]/g, ''), 10);
+  let { data: { proj } } = projects;
+  const { image, title, tech, description, liveLink, gitLink
+  } = proj[btnId];
 
   // add techlist
 
