@@ -17,21 +17,12 @@ navItems.forEach((item) => {
   item.addEventListener('click', hideMenu);
 });
 
-// code for modal
-
 const hideModal = () => {
   document.querySelector('#modal-wrapper').style.display = 'none';
 };
 
-const projectBtn = document.querySelectorAll('.project-btn');
-projectBtn.forEach((item) => {
-  item.addEventListener('click', displayModal);
-});
-
 const cancelBtnModal = document.querySelector('#modal-cancel');
 cancelBtnModal.addEventListener('click', hideModal);
-
-// data for projects
 
 const projects = {
   0: {
@@ -92,31 +83,26 @@ function addData() {
   for (const item in projectsList) {
     projectsList[item].querySelector('img').src = projects[item].image;
     projectsList[item].querySelector('h2').innerHTML = projects[item].title;
-    projectsList[item].querySelectorAll('.lang-item').forEach((value, index)=> {
-      value.firstChild.innerHTML = projects[item].tech[index]
+    projectsList[item].querySelectorAll('.lang-item').forEach((value, index) => {
+      value.firstChild.innerHTML = projects[item].tech[index];
     });
-  };
-};
- 
+  }
+}
+
 addData();
 
-function displayModal() {
-  addDataToModal(this.id)
-  document.querySelector('#modal-wrapper').style.display = 'block';
-};
-
-function addDataToModal(ref){
-  let btnId = ref.replace(/[^0-9]/g, '');
-  let img = projects[btnId].image;
-  let title = projects[btnId].title;
-  let techList = projects[btnId].tech;
-  let description = projects[btnId].description;
-  let liveLink = projects[btnId].liveLink;
-  let gitLink = projects[btnId].gitLink;
-
+function addDataToModal(ref) {
+  const btnId = ref.replace(/[^0-9]/g, '');
+  const img = projects[btnId].image;
+  const title = projects[btnId].title;
+  const techList = projects[btnId].tech;
+  const description = projects[btnId].description;
+  const liveLink = projects[btnId].liveLink;
+  const gitLink = projects[btnId].gitLink;
 
   //add techlist
-  let modalList = document.querySelector('#modal-list');
+
+  const modalList = document.querySelector('#modal-list');
   modalList.innerHTML = '';
 
   techList.forEach((value) => {
@@ -133,3 +119,14 @@ function addDataToModal(ref){
   document.querySelector('#live-link').href = liveLink;
   document.querySelector('#git-link').href = gitLink;
 }
+
+function displayModal() {
+  addDataToModal(this.id);
+  document.querySelector('#modal-wrapper').style.display = 'block';
+}
+
+const projectBtn = document.querySelectorAll('.project-btn');
+projectBtn.forEach((item) => {
+  item.addEventListener('click', displayModal);
+});
+
