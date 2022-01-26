@@ -1,51 +1,55 @@
 const projects = {
-  0: {
-    image: './assets/project-image1.png',
-    title: 'Research Roof - A wordpress project',
-    tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
-    description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
-    liveLink: 'https://github.com/awaisanwar544/portfolio',
-    gitLink: 'https://github.com/awaisanwar544/portfolio',
-  },
-  1: {
-    image: './assets/images.jpeg',
-    title: "Project 2: I'm working on it",
-    tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
-    description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
-    liveLink: 'https://github.com/awaisanwar544/portfolio',
-    gitLink: 'https://github.com/awaisanwar544/portfolio',
-  },
-  2: {
-    image: './assets/project-image1.png',
-    title: "Project 3: I'm working on it",
-    tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
-    description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
-    liveLink: 'https://github.com/awaisanwar544/portfolio',
-    gitLink: 'https://github.com/awaisanwar544/portfolio',
-  },
-  3: {
-    image: './assets/images.jpeg',
-    title: "Project 4: I'm working on it",
-    tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
-    description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
-    liveLink: 'https://github.com/awaisanwar544/portfolio',
-    gitLink: 'https://github.com/awaisanwar544/portfolio',
-  },
-  4: {
-    image: './assets/images.jpeg',
-    title: "Project 5: I'm working on it",
-    tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
-    description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
-    liveLink: 'https://github.com/awaisanwar544/portfolio',
-    gitLink: 'https://github.com/awaisanwar544/portfolio',
-  },
-  5: {
-    image: './assets/images.jpeg',
-    title: "Project 6: I'm working on",
-    tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
-    description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
-    liveLink: 'https://github.com/awaisanwar544/portfolio',
-    gitLink: 'https://google.com',
+  data: {
+    proj: [
+      {
+        image: './assets/project-image1.png',
+        title: 'Research Roof - A wordpress project',
+        tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
+        description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
+        liveLink: 'https://github.com/awaisanwar544/portfolio',
+        gitLink: 'https://github.com/awaisanwar544/portfolio',
+      },
+      {
+        image: './assets/images.jpeg',
+        title: "Project 2: I'm working on it",
+        tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
+        description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
+        liveLink: 'https://github.com/awaisanwar544/portfolio',
+        gitLink: 'https://github.com/awaisanwar544/portfolio',
+      },
+      {
+        image: './assets/project-image1.png',
+        title: "Project 3: I'm working on it",
+        tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
+        description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
+        liveLink: 'https://github.com/awaisanwar544/portfolio',
+        gitLink: 'https://github.com/awaisanwar544/portfolio',
+      },
+      {
+        image: './assets/images.jpeg',
+        title: "Project 4: I'm working on it",
+        tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
+        description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
+        liveLink: 'https://github.com/awaisanwar544/portfolio',
+        gitLink: 'https://github.com/awaisanwar544/portfolio',
+      },
+      {
+        image: './assets/images.jpeg',
+        title: "Project 5: I'm working on it",
+        tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
+        description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
+        liveLink: 'https://github.com/awaisanwar544/portfolio',
+        gitLink: 'https://github.com/awaisanwar544/portfolio',
+      },
+      {
+        image: './assets/images.jpeg',
+        title: "Project 6: I'm working on",
+        tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
+        description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
+        liveLink: 'https://github.com/awaisanwar544/portfolio',
+        gitLink: 'https://google.com',
+      },
+    ]
   },
 };
 
@@ -69,20 +73,16 @@ navItems.forEach((item) => {
 });
 
 function addDataToModal(ref) {
-  const btnId = ref.replace(/[^0-9]/g, '');
-  const img = projects[btnId].image;
-  const title = projects[btnId].title;
-  const techList = projects[btnId].tech;
-  const description = projects[btnId].description;
-  const liveLink = projects[btnId].liveLink;
-  const gitLink = projects[btnId].gitLink;
+  const btnId = parseInt(ref.replace(/[^0-9]/g, ''));
+  let {data: {proj}} = projects;
+  let {image, title, tech, description, liveLink, gitLink} = proj[btnId];
 
   // add techlist
 
   const modalList = document.querySelector('#modal-list');
   modalList.innerHTML = '';
 
-  techList.forEach((value) => {
+  tech.forEach((value) => {
     const node = document.createElement('li');
     node.className = 'lang-item';
     const textNode = document.createTextNode(value);
@@ -90,7 +90,7 @@ function addDataToModal(ref) {
     modalList.appendChild(node);
   });
 
-  document.querySelector('#screenshot').src = img;
+  document.querySelector('#screenshot').src = image;
   document.querySelector('#modal-title').innerHTML = title;
   document.querySelector('#description').innerHTML = description;
   document.querySelector('#live-link').href = liveLink;
@@ -118,13 +118,13 @@ cancelBtnModal.addEventListener('click', hideModal);
 
 function addData() {
   const projectsList = document.querySelectorAll('.work-item');
-  Object.keys(projectsList).forEach(item => {
-    projectsList[item].querySelector('img').src = projects[item].image;
-    projectsList[item].querySelector('h2').innerHTML = projects[item].title;
+  Object.keys(projectsList).forEach((item) => {
+    projectsList[item].querySelector('img').src = projects.data.proj[item].image;
+    projectsList[item].querySelector('h2').innerHTML = projects.data.proj[item].title;
     projectsList[item].querySelectorAll('.lang-item').forEach((value, index) => {
-      value.firstChild.innerHTML = projects[item].tech[index];
+      value.firstChild.innerHTML = projects.data.proj[item].tech[index];
     });
-  })
+  });
 }
 
 addData();
