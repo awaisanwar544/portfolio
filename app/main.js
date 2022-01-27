@@ -252,3 +252,41 @@ const hideModal = () => {
 const cancelBtnModal = document.querySelector('#modal-cancel');
 cancelBtnModal.addEventListener('click', hideModal);
 
+// form validation
+
+const contactForm = document.querySelector('#mobile-form');
+const EMAIL_REQUIRED = 'Please enter email address.';
+const EMAIL_CASE = 'Please enter email in "lower-case" letters';
+const EMAIL_INVALID = 'Please enter email in correct format e.g, abcxyz@domain.something';
+
+function hasValue(input) {
+  if (input !== '') {
+    return true;
+  } return false;
+}
+
+function isLowerCase(input) {
+  if (input === input.toLowerCase()) {
+    return true;
+  } return false;
+}
+
+function isFormatted(input) {
+  const regExp = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+[a-zA-Z]{2,6}$/;
+  if (regExp.test(input)) {
+    return true;
+  } return false;
+}
+
+function success() {
+  const msg = 'Thanks for contacting us! Please wait a moment while your form is submitting';
+  document.querySelector('small').className = 'success';
+  document.querySelector('small').innerHTML = msg;
+}
+
+function error(msg) {
+  document.querySelector('small').className = 'error';
+  document.querySelector('small').innerHTML = msg;
+  document.querySelector('#email').className = 'error-border text-fields';
+}
+
