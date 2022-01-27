@@ -251,3 +251,4 @@ const hideModal = () => {
 
 const cancelBtnModal = document.querySelector('#modal-cancel');
 cancelBtnModal.addEventListener('click', hideModal);
+

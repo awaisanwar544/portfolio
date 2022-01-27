@@ -801,4 +801,8 @@ small {
   #modal-list {
     width: 100%;
   }
+
+  small {
+    align-self: flex-start;
+  }
 }
