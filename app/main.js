@@ -305,3 +305,42 @@ contactForm.addEventListener('submit', (event) => {
     error(EMAIL_INVALID);
   }
 });
+
+// local storage
+
+const nameInput = document.querySelector('#fullname');
+const emailInput = document.querySelector('#email');
+const msgInput = document.querySelector('#message');
+const lsObject = {
+  name: '',
+  email: '',
+  msg: '',
+};
+
+function addToLocalStorage(value) {
+  if (value) {
+    localStorage.setItem('data', JSON.stringify(value));
+  }
+}
+
+contactForm.addEventListener('input', () => {
+  lsObject.name = nameInput.value;
+  lsObject.email = emailInput.value;
+  lsObject.msg = msgInput.value;
+  addToLocalStorage(lsObject);
+});
+
+window.onload = () => {
+  if (localStorage.length !== 0) {
+    const data = JSON.parse(localStorage.data);
+    if (data.name) {
+      nameInput.value = data.name;
+    }
+    if (data.email) {
+      emailInput.value = data.email;
+    }
+    if (data.msg) {
+      msgInput.value = data.msg;
+    }
+  }
+};
