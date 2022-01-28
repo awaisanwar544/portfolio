@@ -522,6 +522,25 @@ textarea {
   margin-left: 1em;
 }
 
+small {
+  display: block;
+  visibility: hidden;
+}
+
+.success {
+  visibility: visible;
+  color: #36b37e;
+}
+
+.error {
+  visibility: visible;
+  color: #e74c3c;
+}
+
+.error-border {
+  border: 1px solid #e74c3c;
+}
+
 @media only screen and (min-width: 992px) {
   #logo {
     display: none;
@@ -781,5 +800,9 @@ textarea {
 
   #modal-list {
     width: 100%;
+  }
+
+  small {
+    align-self: flex-start;
   }
 }
