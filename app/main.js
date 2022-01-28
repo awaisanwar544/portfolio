@@ -290,3 +290,18 @@ function error(msg) {
   document.querySelector('#email').className = 'error-border text-fields';
 }
 
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const emailAddress = event.target[1].value.trim();
+
+  if (hasValue(emailAddress) && isLowerCase(emailAddress) && isFormatted(emailAddress)) {
+    success();
+    setTimeout(() => { event.target.submit(); }, 5000);
+  } else if (!hasValue(emailAddress)) {
+    error(EMAIL_REQUIRED);
+  } else if (!isLowerCase(emailAddress)) {
+    error(EMAIL_CASE);
+  } else if (!isFormatted(emailAddress)) {
+    error(EMAIL_INVALID);
+  }
+});
