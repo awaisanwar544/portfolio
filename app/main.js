@@ -2,12 +2,12 @@ const projects = {
   data: {
     proj: [
       {
-        image: './assets/project-image1.png',
-        title: 'Research Roof - A wordpress project',
-        tech: ['HTML', 'CSS', 'Javascript', 'Ruby on Rails'],
-        description: 'orem ipsum dolor sit amet consectetur adipisicing elit. Dolore distinctio aut illum officia unde, quod aliquam eos delectus aspernatur temporibus accusantium, sint quisquam sed quaerat provident tempora reprehenderit explicabo amet.',
-        liveLink: 'https://github.com/awaisanwar544/portfolio',
-        gitLink: 'https://github.com/awaisanwar544/portfolio',
+        image: './assets/rr-worksho-img.png',
+        title: 'Research Roof - Virtual Workshop Page',
+        tech: ['HTML', 'CSS', 'Javascript'],
+        description: 'This project is an online website for a virtual workshops conducted by researchroof following provided design guidelines for the website.',
+        liveLink: 'https://awaisanwar544.github.io/rr-workshop/',
+        gitLink: 'https://github.com/awaisanwar544/rr-workshop',
       },
       {
         image: './assets/images.jpeg',
